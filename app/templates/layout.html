@@ -10,6 +10,16 @@
         <h1 class="logo">Little Buzzer</h1>
       </div>
     </header> 
+    <hr>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul>
+    {% for message in messages %}
+        <li>{{ message }} </li>
+    {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
      
     <div class="container">
       {% block content %}

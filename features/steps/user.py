@@ -16,7 +16,7 @@ def step_impl(context):
     username.send_keys("dummy_password")
     br.find_element_by_id("submit").click()
 
-@then(u'I should see the welcome text')
+@then(u'I should see welcome text')
 def step_impl(context):
     br = context.browser
     assert br.find_element_by_id('welcome')
