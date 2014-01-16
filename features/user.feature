@@ -8,3 +8,8 @@ Feature: Confirming that a webpage displays
 	 	   When I go to the front page of the site
 		   And I submit my username and password
 		   Then I should see welcome text
+
+	 Scenario: Check that a user can log out
+	 	   When I go to the front page of the site
+		   And I click the logout button
+		   Then I should see a request to log in again

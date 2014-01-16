@@ -27,3 +27,13 @@ def step_impl(context):
 def step_impl(context):
     br = context.browser
     assert br.find_element_by_id('welcome')
+
+@when(u'I click the logout button')
+def step_impl(context):
+    br = context.browser
+    br.find_element_by_id("Logout").click()
+
+@then(u'I should see a request to log in again')
+def step_impl(context):
+    br = context.browser
+    assert br.find_element_by_id('openid')
